@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'dj_rest_auth',
     'django.contrib.sites',
     'drf_yasg',
+    'gdstorage',
 ]
 
 MIDDLEWARE = [
@@ -201,6 +202,9 @@ EMAIL_USE_TLS = env("EMAIL_USE_TLS")
 EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE_CONTENTS = env('GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE_CONTENTS')
+# GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = env('GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
