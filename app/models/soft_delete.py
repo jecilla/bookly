@@ -7,7 +7,7 @@ class SoftDeletionQuerySet(QuerySet):
     """
     Queryset to handle the bulk deletes that will bypass the
     delete() method of objects ensuring our softdeletes
-    are always complied with.
+    are always complied with..
 
     """
 
@@ -52,7 +52,6 @@ class SoftDeleteModel(models.Model):
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
 
     objects = SoftDeleteManager()
     all_objects = SoftDeleteManager(alive_only=False)
